@@ -8,7 +8,6 @@ class NotesViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ['notes', 'note'];
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24),
       child: Column(
