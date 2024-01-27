@@ -22,7 +22,7 @@ class EditNoteViewBody extends StatelessWidget {
             height: 50,
           ),
           CustomTextField(hint: 'Title'),
-          const SizedBox(
+          SizedBox(
             height: 16,
           ),
           CustomTextField(

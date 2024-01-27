@@ -12,9 +12,9 @@ class CustomAppBar extends StatelessWidget {
     return Row(children: [
       Text(
         title,
-        style: TextStyle(fontSize: 28),
+        style: const TextStyle(fontSize: 28),
       ),
-      Spacer(),
+      const Spacer(),
       CustomIcon(iconData: icon,),
     ]);
   }
