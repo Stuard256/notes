@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../constants.dart';
 import '../../cubits/notes_cubit/notes_cubit.dart';
 import 'custom_app_bar.dart';
 import 'notes_list_view.dart';
@@ -29,7 +30,7 @@ class _NotesViewBodyState extends State<NotesViewBody> {
             height: 50,
           ),
           CustomAppBar(
-            title: 'Notes',
+            title: kTitle,
             icon: Icons.search,
           ),
           Expanded(
