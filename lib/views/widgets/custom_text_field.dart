@@ -3,16 +3,22 @@ import 'package:notes/constants.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField(
-      {super.key, required this.hint, this.maxLines = 1, this.onSaved});
+      {super.key,
+      required this.hint,
+      this.maxLines = 1,
+      this.onSaved,
+      this.onChanged});
 
   final String hint;
   final int maxLines;
 
   final void Function(String?)? onSaved;
+  final Function(String)? onChanged;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+        onChanged: onChanged,
         onSaved: onSaved,
         validator: (value) {
           if (value?.isEmpty ?? true) {
@@ -36,7 +42,9 @@ class CustomTextField extends StatelessWidget {
 
   OutlineInputBorder buildBorder([color]) {
     return OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8),
+      borderRadius: BorderRadius.circular(
+        8,
+      ),
       borderSide: BorderSide(
         color: color ?? Colors.white,
       ),
